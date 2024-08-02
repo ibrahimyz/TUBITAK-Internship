@@ -22,7 +22,7 @@ namespace util {
 		// Constructor (empty vector)
 		StaticVector() : size(0), data{} {}
 
-		// Function to add ana element at the end of the vector
+		// Function to add an element at the end of the vector
 		bool push_back(const T& value) {
 			//Check if vector has reached its capacity
 			if (size >= Capacity)
@@ -63,6 +63,10 @@ namespace util {
 		// Function to check if the vector is empty
 		bool empty() const {
 			return size == 0;
+		}
+
+		void clear() {
+			size = 0;
 		}
 
 		// Begin iterator
