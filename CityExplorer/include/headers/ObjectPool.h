@@ -23,7 +23,7 @@ namespace util {
 			size_t currentIndex = (lastAllocatedIndex + 1) % Size;
 			for (uint32_t i = 0; i < Size; ++i) {
 
-				// If the current index is already allocated, move to the next
+				// Skip if the current index is already allocated (circularly)
 				if (isAllocated[currentIndex]) {
 					currentIndex = (currentIndex + 1) % Size;
 					continue;
@@ -43,7 +43,7 @@ namespace util {
 		int Deallocate(const T* pObj) {
 			for (uint32_t i = 0; i < Size; ++i)
 
-				// Check if the object being deallocated is in the pool
+				// Verify that the object to be deallocated belongs to the pool
 				if (&objects[i] == pObj) {
 					if (!isAllocated[i])
 						return ErrorCode::OBJECT_NOT_ALLOCATED; // Object not allocated
@@ -57,8 +57,8 @@ namespace util {
 		}	
 
 	private:
-		T objects[Size]; // Array to hold the pool of objects
-		bool isAllocated[Size]; // Array to track allocated objects
+		T objects[Size]; // Fixed-size array for object pool
+		bool isAllocated[Size]; // Allocation flags for objects in the pool
 		size_t lastAllocatedIndex; // Index of the last allocated object
 	};
 
