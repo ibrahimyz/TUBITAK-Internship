@@ -72,7 +72,7 @@ namespace util4 {
 
 		// Check the buses have a same period at current time (mod = 0)
 		int checkPeriod(util::StaticVector<int, MAX_BUS_NUM>& buses, int time) {
-			if (buses.getSize() == 0) // <= 1 olmasý daha doðru olabilir???!!
+			if (buses.getSize() == 0) // <= 1 olmasÃ½ daha doÃ°ru olabilir???!!
 				return false;
 
 			for (std::size_t i = 0; i < buses.getSize() - 1; ++i) {
@@ -91,7 +91,7 @@ namespace util4 {
 			std::cout << "\n";
 		}
 
-		/*// eðer 06.09 geçe olan 2 bus ve 6 geçe olan 1 bus varsa aslýnda 3 geçe olan bus vardýr!
+		/*// eÃ°er 06.09 geÃ§e olan 2 bus ve 6 geÃ§e olan 1 bus varsa aslÃ½nda 3 geÃ§e olan bus vardÃ½r!
 		int checkTraffic(util::StaticVector<int, MAX_BUS_NUM>& buses, int modCount[]) {
 
 			static int count = 0;
