@@ -19,7 +19,7 @@ namespace algorithm {
 
 	typedef util::StaticVector<std::size_t, numOfCities> Vector;
 
-	// 1. Define the Graph Structure:
+	// 1. Define the Graph Data Structure:
 	class Graph {
 	private:
 
@@ -54,7 +54,7 @@ namespace algorithm {
 							int weight1 = algorithm::findWeight<numOfCities>(line, j); // Find the weight for the edge
 							E->weight = (weight1 >= 150 && weight1 <= 250) ? weight1 : -1;
 							E->destination = j;
-							adjList[lineIndex].push_back(*E); // Add edge to the adjacency list
+							adjList[lineIndex].push_back(*E); // Add the edge to the adjacency list
 						}
 					}
 				}
@@ -70,16 +70,16 @@ namespace algorithm {
 			pathLength[vertex] = currentPath.getSize();	// Store the length of the current path for the vertex
 
 
-			// Loop through all adjacent vertices (edges) of the current vertex
+			// Loop through all edges connected to the current vertex
 			for (std::size_t i = 0; i < adjList[vertex].getSize(); ++i) {
 				const Edge& edge = adjList[vertex][i];
 
-				// If the destination vertex is not visited and the edge has a valid weight, continue DFS
+				// Continue DFS if the destination vertex is unvisited and the edge has a valid weight
 				if (!visited[edge.destination] && edge.weight != -1)
 					DFSWithLength(edge.destination, visited, pathLength, maxLength, longestPath, currentPath);
 			}
 
-			// If the path from this vertex is longer than the previous max length, update the max length
+			// Update the max length if the path from this vertex is longer
 			if (pathLength[vertex] > maxLength) {
 				maxLength = pathLength[vertex];
 				longestPath.clear();
@@ -117,7 +117,7 @@ namespace algorithm {
 			maxLengths[src] = maxLength;
 		}
 
-		// Method to find and print the maximum value in the maxLengths array
+		// Finds and prints the maximum value in the maxLengths array
 		void findMaxLength() {
 			int maxLength = 0;
 			std::size_t maxIndex = 0;
@@ -131,7 +131,7 @@ namespace algorithm {
 			std::cout << "The maximum path length is " << maxLength << " found at city " << maxIndex + 1 << ".\n";
 		}
 
-		// Print Graph
+		// Print the Graph
 		void printGraph() {
 			for (std::size_t i = 0; i < numOfCities; ++i) {
 				std::cout << "City " << i << " connections:\n";
