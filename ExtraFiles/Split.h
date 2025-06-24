@@ -38,12 +38,12 @@ namespace algorithm {
 }// end of namespace
 
 /*
-11:45 - 3 ilk başta end = : oluyor. "11" ilk tokenimiz pushlanıyor.
+11:45 - 3 ilk baÃ¾ta end = : oluyor. "11" ilk tokenimiz pushlanÃ½yor.
 start = end + 1 oluyor. End = yeni start'tan sonraki ilk delimeter yani - oluyor.
-hala while içindeyiz ve token "45" oluyor pushlanıyor. 
-Start = end + 1 oluyor, end = artık start'tan sonra delimeter olmadığı için npos oluyor.
-While bitiyor. Start son değeri ile tokeni oluşturuyor yani "3", pushlanıyor.
-Return tokens ile allTokens vector'üne token'lerimiz (row) pushlanıyor. [findIntervals.h]
+hala while iÃ§indeyiz ve token "45" oluyor pushlanÃ½yor. 
+Start = end + 1 oluyor, end = artÃ½k start'tan sonra delimeter olmadÃ½Ã°Ã½ iÃ§in npos oluyor.
+While bitiyor. Start son deÃ°eri ile tokeni oluÃ¾turuyor yani "3", pushlanÃ½yor.
+Return tokens ile allTokens vector'Ã¼ne token'lerimiz (row) pushlanÃ½yor. [findIntervals.h]
 */
 
 #endif // !INCLUDE_UTIL_SPLIT_H_
