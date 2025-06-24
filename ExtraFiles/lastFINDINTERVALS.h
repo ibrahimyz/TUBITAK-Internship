@@ -86,9 +86,9 @@ namespace util4 {
 			std::cout << "\n";
 		}
 
-		// TO DO 1: 10 VE 19'LUK 2 OTOBÜS VAR AMA 19, 10'UN 1DK ERKEN GELMÝÞÝ OLUYOR...			xxx
-		// TO DO 2: TAM SAPMA ZAMANI OLAN BAÞKA BÝR OTOBÜS VARSA SIKINTI, BUSCOUNT > 2 ?..		xxx
-		// FARKLI SAPMALI OTOBÜSLERLE DE DENE...												xxx
+		// TO DO 1: 10 VE 19'LUK 2 OTOBÃœS VAR AMA 19, 10'UN 1DK ERKEN GELMÃÃžÃ OLUYOR...			xxx
+		// TO DO 2: TAM SAPMA ZAMANI OLAN BAÃžKA BÃR OTOBÃœS VARSA SIKINTI, BUSCOUNT > 2 ?..		xxx
+		// FARKLI SAPMALI OTOBÃœSLERLE DE DENE...												xxx
 
 		// Find bus intervals from vector.
 		void FindInterval(util::StaticVector<int, MAX_BUS_NUM>& intervals) {
@@ -149,7 +149,7 @@ namespace util4 {
 			return false;
 		}
 
-		// check deviation ve period ayný þeyleri yapýyor aslýnda. Deviation geliþmiþ versiyonu.
+		// check deviation ve period aynÃ½ Ã¾eyleri yapÃ½yor aslÃ½nda. Deviation geliÃ¾miÃ¾ versiyonu.
 
 */
 
@@ -188,7 +188,7 @@ for (std::size_t i = 0; i < buses.getSize(); ++i) {
 				allDeviations.push_back(busDeviations);
 			}
 
-			// 1 bus varsa, 1 busDeviations var zaten. O yüzden 2 for loop yetiyor.
+			// 1 bus varsa, 1 busDeviations var zaten. O yÃ¼zden 2 for loop yetiyor.
 
 			for (std::size_t i = 0; i < buses.getSize(); ++i) {
 				for (std::size_t j = 0; j < allDeviations[i].getSize(); ++j) {
@@ -199,7 +199,7 @@ for (std::size_t i = 0; i < buses.getSize(); ++i) {
 */
 
 /*
-		// eðer 06.09 geçe olan 2 bus ve 6 geçe olan 1 bus varsa aslýnda 3 geçe olan bus vardýr!
+		// eÃ°er 06.09 geÃ§e olan 2 bus ve 6 geÃ§e olan 1 bus varsa aslÃ½nda 3 geÃ§e olan bus vardÃ½r!
 	int checkTraffic(util::StaticVector<int, MAX_BUS_NUM>&buses, int modCount[]) {
 
 			static int count = 0;
