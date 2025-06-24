@@ -1,9 +1,15 @@
-﻿#include <iostream>
+/**
+ * @file main.cpp
+ * @brief Entry point of the CityExplorer application.
+ *        Performs a DFS-based traversal from all 81 cities and prints the longest discovered path.
+ */
+
+#include <iostream>
 
 #include "../include/headers/Vector.h"
 #include "../include/algorithm/CityExplorer.h"
 
-// Create an instance of the Graph class
+// Global graph instance representing the map of cities
 algorithm::Graph G1;
 
 int main() {
