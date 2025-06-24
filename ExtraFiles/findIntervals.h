@@ -74,7 +74,7 @@ namespace util2 {
 
 		// Check the buses have a same period at current time (mod = 0)
 		bool checkPeriod(util::StaticVector<util::StaticVector<int, 2>, MAX_BUS_NUM>& buses, int time) {
-			if (buses.getSize() == 0) // <= 1 olması daha doğru olabilir???!! alttaki size - 1 onu sağlıyor mu yoksa?
+			if (buses.getSize() == 0) // <= 1 olmasÃ½ daha doÃ°ru olabilir???!! alttaki size - 1 onu saÃ°lÃ½yor mu yoksa?
 				return false;
 
 			for (std::size_t i = 0; i < buses.getSize() - 1; ++i) {
@@ -135,13 +135,13 @@ namespace util2 {
 				int check_count = countBuses(allIntervals, current_time);
 
 				if (check_count - 1 == stop_count) {
-					// yani periodu değişen bir bus var!
-					diffPeriodCount++; // 15->30 olunca bus yok yani 15'in periodu değişiyor
+					// yani periodu deÃ°iÃ¾en bir bus var!
+					diffPeriodCount++; // 15->30 olunca bus yok yani 15'in periodu deÃ°iÃ¾iyor
 					editIntervals(allIntervals, current_time, -1);
 				}
 
 				if (check_count + 1 == stop_count) {
-					// 40 - 1 olunca, 30 olması gereken burada imiş. Tabii 55 - 1 de sağlanıyorsa...
+					// 40 - 1 olunca, 30 olmasÃ½ gereken burada imiÃ¾. Tabii 55 - 1 de saÃ°lanÃ½yorsa...
 					diffPeriodCount++;
 					editIntervals(allIntervals, current_time, +1);
 
